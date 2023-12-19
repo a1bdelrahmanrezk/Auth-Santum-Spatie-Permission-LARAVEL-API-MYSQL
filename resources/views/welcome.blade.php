@@ -16,6 +16,31 @@
         </style>
     </head>
     <body class="antialiased">
+        <div style="text-align: center">
+            <h1 style="font-size: 40px">Login With</h1>
+        <div class="btns" style="display: flex;gap:20px;justify-content:center;font-size:28px;margin:8px;padding:4px;text-align:center;">
+            <button style="background-color: #ccc;border-radius:8px;padding:4px;">
+                <a href="{{route('github.login')}}">
+                    Github
+                </a>
+            </button>
+            <button style="background-color: #660000;border-radius:8px;padding:4px;color:#ffffff;">
+                <a href="{{route('google.login')}}">
+                    Google
+                </a>
+            </button>
+            <button style="background-color: #00138f;border-radius:8px;padding:4px;color:#ffffff;">
+                <a href="{{route('facebook.login')}}">
+                    Facebook
+                </a>
+            </button>
+            <button style="background-color: #00b7ff;border-radius:8px;padding:4px;color:#000000;">
+                <a href="{{route('linkedin.login')}}">
+                    Linkedin
+                </a>
+            </button>
+        </div>
+        </div>
         <div class="relative sm:flex sm:justify-center sm:items-center min-h-screen bg-dots-darker bg-center bg-gray-100 dark:bg-dots-lighter dark:bg-gray-900 selection:bg-red-500 selection:text-white">
             @if (Route::has('login'))
                 <div class="sm:fixed sm:top-0 sm:right-0 p-6 text-right z-10">

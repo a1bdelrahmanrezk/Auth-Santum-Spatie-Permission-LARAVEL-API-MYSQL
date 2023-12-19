@@ -1,6 +1,7 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
+use App\Http\Controllers\SocialiteLogin\SocialiteLoginController;
 
 /*
 |--------------------------------------------------------------------------
@@ -16,3 +17,20 @@ use Illuminate\Support\Facades\Route;
 Route::get('/', function () {
     return view('welcome');
 });
+// Socialite Login 
+// # Github
+Route::get('/login/github', [SocialiteLoginController::class, 'redirectToGithubProvider'])->name('github.login');
+Route::get('/login/github/callback', [SocialiteLoginController::class, 'handleGithubProviderCallback']);
+// # Github
+// # Google
+Route::get('/login/google', [SocialiteLoginController::class, 'redirectToGoogleProvider'])->name('google.login');
+Route::get('/login/google/callback', [SocialiteLoginController::class, 'handleGoogleProviderCallback']);
+// # Google
+// # Facebook
+Route::get('/login/facebook', [SocialiteLoginController::class, 'redirectToFacebookProvider'])->name('facebook.login');
+Route::get('/login/facebook/callback', [SocialiteLoginController::class, 'handleFacebookProviderCallback']);
+// # Facebook
+// # Linkedin
+Route::get('/login/linkedin', [SocialiteLoginController::class, 'redirectToLinkedinProvider'])->name('linkedin.login');
+Route::get('/login/linkedin/callback', [SocialiteLoginController::class, 'handleLinkedinProviderCallback']);
+// # Linkedin

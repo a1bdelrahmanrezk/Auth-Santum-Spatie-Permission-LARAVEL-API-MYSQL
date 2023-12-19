@@ -1,4 +1,4 @@
-# Auth Sanctum & Permission and Roles Api
+# Auth Sanctum & Permission and Roles & Socialite Login[Github-Google-Facebook-Linkedin] Api
 
 ### Steps Cloning laravel project from github
 <ol>
