@@ -1,3 +1,16 @@
+# Auth Sanctum & Permission and Roles Api
+
+### Steps Cloning laravel project from github
+<ol>
+    <li>Run git clone clone-link-project</li>
+    <li>Run composer install</li>
+    <li>Run cp .env.example .env</li>
+    <li>Run php artisan key:generate</li>
+    <li>Run php artisan migrate</li>
+    <li>Run php artisan serve</li>
+    <li>Go to link localhost:8000</li>
+</ol>
+<hr/>
 <p align="center"><a href="https://laravel.com" target="_blank"><img src="https://raw.githubusercontent.com/laravel/art/master/logo-lockup/5%20SVG/2%20CMYK/1%20Full%20Color/laravel-logolockup-cmyk-red.svg" width="400" alt="Laravel Logo"></a></p>
 
 <p align="center">
