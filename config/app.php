@@ -170,6 +170,7 @@ return [
         App\Providers\RouteServiceProvider::class,
         Spatie\Permission\PermissionServiceProvider::class,
         Ichtrojan\Otp\OtpServiceProvider::class,
+        Srmklive\PayPal\Providers\PayPalServiceProvider::class,
     ])->toArray(),
 
     /*

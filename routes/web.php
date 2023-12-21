@@ -1,5 +1,6 @@
 <?php
 
+use App\Http\Controllers\Payments\PaymentController;
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\SocialiteLogin\SocialiteLoginController;
 
@@ -34,3 +35,14 @@ Route::get('/login/facebook/callback', [SocialiteLoginController::class, 'handle
 Route::get('/login/linkedin', [SocialiteLoginController::class, 'redirectToLinkedinProvider'])->name('linkedin.login');
 Route::get('/login/linkedin/callback', [SocialiteLoginController::class, 'handleLinkedinProviderCallback']);
 // # Linkedin
+// Socialite Login
+// Payment Gateways
+// # Paypal
+Route::get('view-payment',function(){
+    return View('payment');
+});
+Route::post('/payment',[PaymentController::class,'payment'])->name('paypal');
+Route::get('/payment/success',[PaymentController::class,'success'])->name('success');
+Route::get('/payment/cancel',[PaymentController::class,'cancel'])->name('cancel');
+// # Paypal
+// Payment Gateways
